@@ -2,13 +2,18 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1 fx:controller=" fx:controller="HelloController">
-      <TextArea fx:id="textArea" editable="false" layoutX="27.0" layoutY="19.0" prefHeight="315.0" prefWidth="384.0" />
-      <TextField fx:id="textField" layoutX="27.0" layoutY="346.0" prefHeight="40.0" prefWidth="384.0" promptText="Введите сообщение" />
-      <ListView fx:id="listView" layoutX="429.0" layoutY="19.0" prefHeight="315.0" prefWidth="143.0" />
-      <Button defaultButton="true" onAction="#sendMsg" layoutX="429.0" layoutY="346.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="143.0" text="Отправить" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HelloController">
+      <TextField promptText="Login" fx:id="loginField" layoutX="28.0" layoutY="103.0" prefHeight="25.0" prefWidth="508.0" />
+      <PasswordField promptText="Password" fx:id="passField" layoutX="28.0" layoutY="136.0" prefHeight="25.0" prefWidth="508.0" />
+      <Button fx:id="sendAuthButton" layoutX="143.0" layoutY="188.0" onAction="#sendAuth" prefHeight="25.0" prefWidth="262.0" text="Отправить" />
+      <TextField fx:id="serviceField" editable="false" layoutX="31.0" layoutY="245.0" prefHeight="25.0" prefWidth="508.0" />
+      <TextArea fx:id="textArea" editable="false" layoutX="27.0" layoutY="19.0" prefHeight="315.0" prefWidth="384.0" visible="false" />
+      <TextField fx:id="textField" layoutX="27.0" layoutY="346.0" prefHeight="40.0" prefWidth="384.0" promptText="Введите сообщение" visible="false" />
+      <ListView fx:id="listView" layoutX="429.0" layoutY="19.0" prefHeight="315.0" prefWidth="143.0" visible="false" />
+      <Button fx:id="sendMsgButtom" defaultButton="true" layoutX="429.0" layoutY="346.0" mnemonicParsing="false" onAction="#sendMsg" prefHeight="40.0" prefWidth="143.0" text="Отправить" visible="false" />
 </Pane>
